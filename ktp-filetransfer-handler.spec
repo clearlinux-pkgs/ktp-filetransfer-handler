@@ -5,11 +5,11 @@
 # Source0 file verified with key 0xDBD2CE893E2D1C87 (cfeck@kde.org)
 #
 Name     : ktp-filetransfer-handler
-Version  : 19.08.0
-Release  : 5
-URL      : https://download.kde.org/stable/applications/19.08.0/src/ktp-filetransfer-handler-19.08.0.tar.xz
-Source0  : https://download.kde.org/stable/applications/19.08.0/src/ktp-filetransfer-handler-19.08.0.tar.xz
-Source1 : https://download.kde.org/stable/applications/19.08.0/src/ktp-filetransfer-handler-19.08.0.tar.xz.sig
+Version  : 19.08.1
+Release  : 6
+URL      : https://download.kde.org/stable/applications/19.08.1/src/ktp-filetransfer-handler-19.08.1.tar.xz
+Source0  : https://download.kde.org/stable/applications/19.08.1/src/ktp-filetransfer-handler-19.08.1.tar.xz
+Source1 : https://download.kde.org/stable/applications/19.08.1/src/ktp-filetransfer-handler-19.08.1.tar.xz.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-2.0
@@ -52,14 +52,14 @@ locales components for the ktp-filetransfer-handler package.
 
 
 %prep
-%setup -q -n ktp-filetransfer-handler-19.08.0
+%setup -q -n ktp-filetransfer-handler-19.08.1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1565910602
+export SOURCE_DATE_EPOCH=1567712264
 mkdir -p clr-build
 pushd clr-build
 # -Werror is for werrorists
@@ -76,7 +76,7 @@ make  %{?_smp_mflags} VERBOSE=1
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1565910602
+export SOURCE_DATE_EPOCH=1567712264
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/ktp-filetransfer-handler
 cp COPYING %{buildroot}/usr/share/package-licenses/ktp-filetransfer-handler/COPYING
